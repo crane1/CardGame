@@ -1,5 +1,5 @@
 var imgs = [
-	"img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img/back.png"
+	"img/1.png","img/2.png","img/3.png","img/4.png","img/5.png","img/back.png"
 ]
 
 //创建游戏对象
@@ -126,11 +126,13 @@ game.startPlay = function(){
 game.setBang = function(){
 	game.playName = prompt("请输入你的名字：", "小四瓣");
 	var no = getCookie("No");
-	if(no == null || isNaN(no)){
+	if(no == null || isNaN(no) || no == ""){
 		setCookie("No", 1);
 	}else{
 		setCookie("No", parseInt(no)+1); //设置序号
 	}
+	
+	no = getCookie("No");
 	
 	setCookie("name"+no, game.playName)
 	setCookie("time"+no, game.playTime)
@@ -159,9 +161,9 @@ game.showBang = function(){
 }
 
 game.addOneScore = function(v_parent, index){
-	var name = getCookie("name"+index);
-	var time = getCookie("time"+index);
-	var level = getCookie("level"+index);
+	var name = getCookie("name"+(index+1));
+	var time = getCookie("time"+(index+1));
+	var level = getCookie("level"+(index+1));
 				
 	li_name[index] = document.createElement("li");
 	li_name[index].innerText = name + "\t" + time + "\t" + level + "\n";
