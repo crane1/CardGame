@@ -1,0 +1,27 @@
+body{
+	background-color: bisque;
+	text-align: center;
+}
+
+
+li{
+	list-style-position:inside;
+}
+
+.card{
+	margin: 10px;
+	border: 2px solid white;
+	transition: transform 1s;
+}
+
+.card:hover{
+	border: 2px solid greenyellow;
+}
+
+
+#time{
+	color: cornflowerblue;
+	font-size: 200%;
+}
+
+

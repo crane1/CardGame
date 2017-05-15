@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/card.css"/>
+		<script type="text/javascript" src="js/my_cookie.js" ></script>
+		<script type="text/javascript" src="js/card.js" ></script>
+	</head>
+	<body onload="game.start()">
+			<h1>卡牌记忆游戏</h1>
+			<hr color="#6495ED" />
+			<div id="time"></div>
+				<img src="img/1.jpg" id="card1" class="card" onclick="game.clickEvent(0)"/>
+				<img src="img/2.jpg" id="card2" class="card" onclick="game.clickEvent(1)"/> 
+				<img src="img/3.jpg" id="card3" class="card" onclick="game.clickEvent(2)"/> 
+				<img src="img/4.jpg" id="card4" class="card" onclick="game.clickEvent(3)"/> 
+				<img src="img/5.jpg" id="card5" class="card" onclick="game.clickEvent(4)"/> 
+			<ol id="bang"></ol>
+	</body>
+</html>
